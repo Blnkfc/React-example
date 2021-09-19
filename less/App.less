@@ -1,0 +1,82 @@
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  display: grid;
+  width: 84%;
+  margin-left: 8%;
+  grid-template-areas:
+  "h h"
+  "s c"
+;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+.header{
+  grid-area: h;
+  background-color: green;
+  &-logo{
+    width: 3rem;
+    height: 3rem;
+    padding: 3px;
+  }
+}
+.sidebar{
+  grid-area: s;
+  background-color: green;
+  padding:1rem 0 0 1rem;
+  &-link{
+    margin-bottom: 1.5rem;
+    a{
+      height: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    &:hover{
+      background-color: darken(green, 2%);
+      border: solid 1px darken(green, 5%);
+    }
+    #settings{
+      margin-top: 4rem;
+    }
+    }
+}
+.content{
+  grid-area: c;
+  background-color: bisque;
+  &-img{
+    width: 100%;
+  }
+  &-profile{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid 1px #8a8555;
+    &-picture{
+      img{
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+    &-information{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 2rem;
+      p{
+        display: inline-block;
+      }
+    }
+  }
+  &-posts{
+    &-btn{
+      width: 8rem;
+      height: 2rem;
+      font-size: 1.5rem;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+      float: right;
+    }
+  }
+}
