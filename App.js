@@ -7,11 +7,13 @@ import Profile from "./components/Profile";
 
 const App = () => {
   return (
-    <div className={'wrapper'}>
-      <Header />
-      <Sidebar />
-      <Profile />
-    </div>
+      <div className="body">
+            <div className={'wrapper'}>
+                <Header />
+                <Sidebar />
+                <Profile />
+            </div>
+      </div>
   );
 }
 

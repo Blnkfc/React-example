@@ -27,9 +27,9 @@ const Profile = () => {
                 </div>
             </div>
             <div className="content-posts">
-                <h2>My posts</h2>
-                <textarea name="" id="" cols="140" rows="5" placeholder={'New post'}> </textarea>
-                <button className={'content-posts-btn'}>send</button>
+                <label htmlFor="Post">My post</label>
+                <textarea name="" id="Post" cols="140" rows="7" placeholder={'New post'}> </textarea>
+                <button className={'content-posts-btn'}>Send</button>
             </div>
         </div>
 
