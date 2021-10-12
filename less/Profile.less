@@ -1,13 +1,5 @@
-*{
-  box-sizing: border-box;
-}
-@background_dark: #242424;
-@border_gray: #5c5c5c;
 
-
-.body{
-  background-color: #474747;
-}
+/* GENERAL TAGS */
 .wrapper{
   display: grid;
   width: 84%;
@@ -23,60 +15,11 @@
 }
 
 
+/* VARIABLES */
+@background_dark: #242424;
+@border_gray: #5c5c5c;
 
 
-
-/*
-
-HEADER
-.header{
-  grid-area: h;
-  background-color: @background_dark;
-  border-bottom: solid 2px @border_gray;
-  border-radius:0 5px 0 5px ;
-  &-logo{
-    width: 3rem;
-    height: 3rem;
-    padding: 3px;
-  }
-}
-
-
-
-
-
-SIDEBAR
-.sidebar{
-  grid-area: s;
-  background-color: @background_dark;
-  padding:1rem 0 0 1rem;
-  &-link{
-    margin-bottom: 1.5rem;
-    height: 2rem ;
-    width: 80%;
-    border-bottom: solid 1px @border_gray;
-    border-radius: 5px;
-    a{
-      height: 1.5rem;
-      color: white;
-      padding-left: 1rem;
-      text-decoration: none;
-    }
-    &:hover{
-      background-color: lighten(@background_dark, 2%);
-      border: solid 1px lighten(@border_gray, 30%);
-    }
-    #settings{
-      margin-top: 4rem;
-    }
-    }
-}
-
-
-
-
-
-PROFILE
 .content{
   grid-area: c;
   background-color: @background_dark;
@@ -137,4 +80,4 @@ PROFILE
       }
     }
   }
-}*/
+}
