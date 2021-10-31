@@ -3,24 +3,42 @@
 }
 @background_dark: #242424;
 @border_gray: #5c5c5c;
-
+@text_color: darken(white, 10%);
 
 .body{
-  background-color: #474747;
+  background-color: #2b2b2b;
 }
 .wrapper{
   display: grid;
   width: 84%;
   margin-left: 8%;
+  background-color: #2b2b2b;
   grid-template-areas:
   "h h"
   "s c"
+  "s p"
 ;
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  background-color: #474747;
 }
+
+
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color:#2b2b2b ;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: lighten(#2b2b2b, 20%);
+  border-radius: 10px;
+}
+
+
 
 
 

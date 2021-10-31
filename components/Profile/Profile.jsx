@@ -1,5 +1,6 @@
 import React from "react";
-import '../css/Profile.css'
+import './Profile.css'
+import Posts from "./Posts/Posts";
 
 const Profile = () => {
     return(
@@ -7,7 +8,7 @@ const Profile = () => {
             <img src="https://static3.depositphotos.com/1000454/256/i/600/depositphotos_2567474-stock-photo-wide-panorama-of-french-alps.jpg" alt="Head of the page" className={'content-img'}/>
             <div className="content-profile">
                 <div className="content-profile-picture">
-                    <img src="https://pbs.twimg.com/profile_images/1388848157426073600/XssamqWG.jpg" alt="Profile picture" s/>
+                    {/*<img src="https://pbs.twimg.com/profile_images/1388848157426073600/XssamqWG.jpg" alt="Profile picture" s/>*/}
                 </div>
                 <div className="content-profile-information">
                     <div className="content-profile-information-name">
@@ -32,6 +33,7 @@ const Profile = () => {
                 <textarea name="" id="Post" cols="140" rows="7" placeholder={'New post'}> </textarea>
                 <button className={'content-posts-btn'}>Send</button>
             </div>
+            <Posts/>
         </div>
 
     )
