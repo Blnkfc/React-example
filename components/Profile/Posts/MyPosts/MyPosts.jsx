@@ -1,7 +1,7 @@
 import React from "react";
 import './MyPosts.css'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
     return(
                 <div className="post">
                     <div className="post-user">
@@ -10,13 +10,17 @@ const MyPosts = () => {
                     </div>
                     <div className="post-content">
                         <p className="post-content-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi enim esse iste itaque suscipit tempore.
+                            {props.massage}
                         </p>
                     </div>
                     <div className="post-options">
-                        <button className="post-options-like">Like</button>
-                        <button className="post-options-comment">Comm</button>
-                        <button className="post-options-share">Share</button>
+                        <div className="post-options-like"></div>
+                        <div className="post-options-comment"></div>
+                        <div className="post-options-share"></div>
+                    </div>
+                    <div className="post-stat">
+                        <span>Likes: {props.likesCount}</span>
+                        <span>Comments: {props.commentsCount}</span>
                     </div>
                 </div>
     )

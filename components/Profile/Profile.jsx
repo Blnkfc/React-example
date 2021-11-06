@@ -3,9 +3,13 @@ import './Profile.css'
 import Posts from "./Posts/Posts";
 
 const Profile = () => {
-    return(
+    return (
         <div className="content">
-            <img src="https://static3.depositphotos.com/1000454/256/i/600/depositphotos_2567474-stock-photo-wide-panorama-of-french-alps.jpg" alt="Head of the page" className={'content-img'}/>
+            <div className="content-cap">
+                <img
+                    src="https://static3.depositphotos.com/1000454/256/i/600/depositphotos_2567474-stock-photo-wide-panorama-of-french-alps.jpg"
+                    alt="Head of the page" className={'content-cap-img'}/>
+            </div>
             <div className="content-profile">
                 <div className="content-profile-picture">
                     {/*<img src="https://pbs.twimg.com/profile_images/1388848157426073600/XssamqWG.jpg" alt="Profile picture" s/>*/}

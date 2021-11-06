@@ -1,0 +1,30 @@
+/* GENERAL TAGS  */
+@import "../../../less/App.less";
+
+.contact {
+  display: flex;
+  padding: 0.8rem;
+  border-bottom: solid 1px lighten(@background_dark, 10%);
+  &-image {
+    display: inline-block;
+    background-image: url("../../../img/555_text.png");
+    background-size: cover;
+    border: 2px solid @border_blue;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem ;
+    &-name {
+      color: @bright_text_color;
+      font-weight: 600;
+    }
+    &-message {
+      color: @text_color;
+    }
+  }
+}

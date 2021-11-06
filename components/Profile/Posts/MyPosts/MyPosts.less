@@ -1,5 +1,12 @@
 /* GENERAL TAGS */
 @import "../../../../less/App.less";
+.options_adjust(){
+  margin: 0 0.5rem 0 3rem;
+  display: inline-block;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
 .post{
   color: @text_color;
@@ -14,25 +21,45 @@
       background-size: cover;
       width: 3rem;
       height: 3rem;
-      border: solid 3px #4d4d4d;
+      border: solid 3px @border_blue;
       border-radius: 50%;
       text-align: center;
       line-height: 3rem;
     }
     &-name{
+      color: @bright_text_color;
       position: absolute;
       display: inline-block;
       text-align: center;
       line-height: 3rem;
       padding-left: 0.5rem;
+      font-size: 20px;
     }
   }
   &-content{
     &-text{
-
+      margin: 0 0 1rem 3rem;
+      font-size: 20px;
     }
   }
   &-options{
-
+    display: inline-block;
+    padding: 0 0.5rem 0 0.5rem;
+      &-like {
+        .options_adjust();
+        background-image: url("../../../../img/like.png");
+      }
+    &-comment {
+      .options_adjust();
+      background-image: url("../../../../img/comment.png");
+    }
+    &-share {
+      .options_adjust();
+      background-image: url("../../../../img/share.png");
+    }
+  }
+  &-stat span{
+    color: @text_color;
+    margin: 0 0 0 3rem;
   }
 }

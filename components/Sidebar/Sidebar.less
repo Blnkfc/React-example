@@ -3,6 +3,9 @@
 
 
 .sidebar{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
   grid-area: s;
   background-color: @background_dark;
   padding:1rem 0 0 1rem;
@@ -10,20 +13,26 @@
     margin-bottom: 1.5rem;
     height: 2rem ;
     width: 80%;
+    background-color: @background_dark;
     border-bottom: solid 1px @border_gray;
     border-radius: 5px;
     a{
-      height: 1.5rem;
+      display: inline-block;
+      height: 2rem;
+      width: 100%;
       color: white;
       padding-left: 1rem;
       text-decoration: none;
+
     }
     &:hover{
       background-color: lighten(@background_dark, 2%);
       border: solid 1px lighten(@border_gray, 30%);
     }
-    #settings{
-      margin-top: 4rem;
+    &-active{
+      background-color: lighten(@background_dark, 2%);
+      border: solid 1px lighten(@border_gray, 30%);
+      border-radius: 5px;
     }
   }
 }

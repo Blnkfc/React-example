@@ -6,14 +6,23 @@
 .content{
   grid-area: c;
   background-color: @background_dark;
-  &-img{
+  &-cap{
     width: 100%;
+    height: 15rem;
+    &-img{
+      position: center;
+      width: 100%;
+      filter: brightness(50%);
+      overflow: hidden;
+    }
   }
   &-profile{
+    position: sticky;
     display: flex;
     flex-wrap: wrap;
     border-bottom: solid 1px @border_gray;
     margin-bottom: 5rem;
+    z-index: 9999;
     &-picture{
       background-image: url("../../img/555_text.png");
       background-size: cover;
@@ -23,13 +32,14 @@
       width: 15rem;
       height: 15rem;
       border: solid 1px white;
+      border-radius: 10px;
     }
     &-information{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding-left: 2rem;
-      color: @text_color;
+      color: @bright_text_color;
       p{display: inline-block;}
       &-site{
         a{text-decoration: none;}
