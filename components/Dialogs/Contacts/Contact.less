@@ -1,10 +1,26 @@
 /* GENERAL TAGS  */
 @import "../../../less/App.less";
 
-.contact {
+.contact(){
   display: flex;
   padding: 0.8rem;
+  border: none;
   border-bottom: solid 1px lighten(@background_dark, 10%);
+  background-color: @background_lighter;
+  width: 100%;
+  text-decoration: none;
+}
+
+.contact {
+  .contact();
+  &:hover{
+    background-color: lighten(@background_lighter, 10%);
+    cursor: pointer;
+  }
+  &-active{
+    .contact();
+    background-color: lighten(@background_lighter, 10%);
+  }
   &-image {
     display: inline-block;
     background-image: url("../../../img/555_text.png");
@@ -20,11 +36,18 @@
     flex-direction: column;
     margin-left: 1rem ;
     &-name {
+      display: inline-block;
       color: @bright_text_color;
       font-weight: 600;
     }
     &-message {
+      display: inline-block;
       color: @text_color;
     }
+  }
+  a{
+    display: flex;
+    width: 100%;
+    text-decoration: none;
   }
 }

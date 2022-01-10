@@ -8,8 +8,16 @@
     flex-grow: 1;
     max-width: 20rem;
     background-color: @background_lighter;
+    &:hover{
+      background-color: lighten(@background_lighter, 10%);
+      cursor: pointer;
+    }
+    &:focus{
+      background-color: lighten(@background_lighter, 10%);
+    }
   }
   &-chat{
     flex-grow: 3;
   }
 }
+

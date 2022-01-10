@@ -33,7 +33,25 @@ body::-webkit-scrollbar-thumb {
 .contact {
   display: flex;
   padding: 0.8rem;
+  border: none;
   border-bottom: solid 1px #3e3e3e;
+  background-color: #313131;
+  width: 100%;
+  text-decoration: none;
+}
+.contact:hover {
+  background-color: #4a4a4a;
+  cursor: pointer;
+}
+.contact-active {
+  display: flex;
+  padding: 0.8rem;
+  border: none;
+  border-bottom: solid 1px #3e3e3e;
+  background-color: #313131;
+  width: 100%;
+  text-decoration: none;
+  background-color: #4a4a4a;
 }
 .contact-image {
   display: inline-block;
@@ -50,9 +68,16 @@ body::-webkit-scrollbar-thumb {
   margin-left: 1rem ;
 }
 .contact-info-name {
+  display: inline-block;
   color: #e6e6e6;
   font-weight: 600;
 }
 .contact-info-message {
+  display: inline-block;
   color: #999999;
+}
+.contact a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
 }

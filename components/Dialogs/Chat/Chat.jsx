@@ -1,13 +1,15 @@
 import React from "react";
 import './Chat.css'
-import Contact from "../Contacts/Contacts";
 import Message from "./Message/Message";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 const Chat = (props) => {
     return(
-        <div className="chat">
-            <Message name={`Sasha`} text={`I'm loosing my mind!!!`} />
-        </div>
+        <Router>
+            <div className="chat">
+                <Route path={"/dialogs/"+props.name}> <Message name={`Sasha`} text={`I'm losing my mind!!!`} /> </Route>
+            </div>
+        </Router>
     )
 }
 
