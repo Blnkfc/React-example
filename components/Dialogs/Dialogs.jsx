@@ -13,20 +13,14 @@ let ContactsInfo = [
     {name: `Lily`, message: `As good as always`},
     {name: `Andrew`, message: `Bye`}
 ]
-
+let DialogsElements = ContactsInfo
+    .map(Dialog => <Contacts name={Dialog.name} message={Dialog.message}/> )
 
 const Dialogs = () => {
     return (
         <div className="dialogs">
             <div className="dialogs-contacts">
-                <Contacts name={ContactsInfo[0].name} message={ContactsInfo[0].message}/>
-                <Contacts name={ContactsInfo[1].name} message={ContactsInfo[1].message}/>
-                <Contacts name={ContactsInfo[2].name} message={ContactsInfo[2].message}/>
-                <Contacts name={ContactsInfo[3].name} message={ContactsInfo[3].message}/>
-                <Contacts name={ContactsInfo[4].name} message={ContactsInfo[4].message}/>
-                <Contacts name={ContactsInfo[5].name} message={ContactsInfo[5].message}/>
-                <Contacts name={ContactsInfo[6].name} message={ContactsInfo[6].message}/>
-                <Contacts name={ContactsInfo[7].name} message={ContactsInfo[7].message}/>
+                {DialogsElements}
             </div>
             <div className="dialogs-chat">
                 <Chat />
