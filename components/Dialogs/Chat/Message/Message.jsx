@@ -6,7 +6,7 @@ const Message = (props) => {
         <div className="message">
             <div className="message-img"> </div>
             <div className="message-info">
-                <div className="message-info-text"> <span>{props.text}</span> </div>
+                <div className="message-info-text"> <span>{props.message}</span> </div>
             </div>
         </div>
     )
