@@ -30,7 +30,7 @@ let postInfo = [
     {name: `Megan`, message: `It's my first massage`, likesCount: `478`, commentsCount: `67`},
     {name: `Ashley`, message: `It's my first massage`, likesCount: `20`, commentsCount: `2`},
 ]
-let profileInfo = {name: "Pasha", secondName: "Zabuha", dayOfBirth: "12", monthOfBirth: "September", city: "Kyiv", education: "NAU", webSite: "https://www.instagram.com/pavuchara.jpg/"}
+let profileInfo = {name: "Pasha", secondName: "Zabuha", dayOfBirth: "11", monthOfBirth: "September", city: "Kyiv", education: "NAU", webSite: "https://www.instagram.com/pavuchara.jpg/"}
 
 
 ReactDOM.render(
