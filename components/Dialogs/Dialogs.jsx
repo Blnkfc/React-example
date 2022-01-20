@@ -4,7 +4,7 @@ import Contacts from "./Contacts/Contacts";
 import Chat from "./Chat/Chat";
 
 const Dialogs = (props) => {
-    let DialogsElements = props.contactsInfo
+    let DialogsElements = props.dialogs.contacts
         .map(Dialog => <Contacts name={Dialog.name} message={Dialog.message}/> )
 
     return (
@@ -13,7 +13,7 @@ const Dialogs = (props) => {
                 {DialogsElements}
             </div>
             <div className="dialogs-chat">
-                <Chat name={props.chatMessages.name} message={props.chatMessages.message}  />
+                <Chat name={props.dialogs.chat.name} message={props.dialogs.chat.message}  />
             </div>
         </div>
     )

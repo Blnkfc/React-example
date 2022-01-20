@@ -15,19 +15,19 @@ const ProfileInfo = (props) =>{
             </div>
             <div className="content-profile-information">
                 <div className="content-profile-information-name">
-                    <p>{props.profile.name+" "+props.profile.secondName}</p>
+                    <p>{props.info.name+" "+props.info.secondName}</p>
                 </div>
                 <div className="content-profile-information-birth">
-                    <p>{`Date of birth: `+props.profile.dayOfBirth+" "+props.profile.monthOfBirth}</p>
+                    <p>{`Date of birth: `+props.info.dayOfBirth+" "+props.info.monthOfBirth}</p>
                 </div>
                 <div className="content-profile-information-city">
-                    <p>{`City: `+props.profile.city}</p>
+                    <p>{`City: `+props.info.city}</p>
                 </div>
                 <div className="content-profile-information-education">
-                    <p>{`Education: `+props.profile.education}</p>
+                    <p>{`Education: `+props.info.education}</p>
                 </div>
                 <div className="content-profile-information-site">
-                    <p>Web-site: <a href="">{props.profile.webSite}</a></p>
+                    <p>Web-site: <a href="">{props.info.webSite}</a></p>
                 </div>
             </div>
         </div>

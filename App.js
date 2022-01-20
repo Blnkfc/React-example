@@ -12,8 +12,8 @@ const App = (props) => {
                 <Header/>
                 <Sidebar/>
                 <Switch>
-                    <Route path="/profile" > <Profile posts={props.posts} profile={props.profile}/> </Route>
-                    <Route path="/dialogs" > <Dialogs contactsInfo={props.contactsInfo} chatMessages={props.chatMessages}/> </Route>
+                    <Route path="/profile" > <Profile profile={props.profile} /> </Route>
+                    <Route path="/dialogs" > <Dialogs dialogs={props.dialogs}/> </Route>
                 </Switch>
             </div>
         </Router>
