@@ -6,7 +6,7 @@ import ChatMessages from '../Dialogs'
 const Contacts = (props) =>{
     return(
         <div className="contact">
-            <NavLink to={`/dialogs/`+props.name} activeClassName={`contact-active`}>
+            <NavLink to={`/dialogs/`+props.id} activeClassName={`contact-active`}>
                 <div className="contact-image"> </div>
                 <div className="contact-info">
                     <div className="contact-info-name"> {props.name}  </div>

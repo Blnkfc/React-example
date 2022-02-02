@@ -14,12 +14,12 @@ const MyPosts = (props) => {
                         </p>
                     </div>
                     <div className="post-options">
-                        <div className="post-options-like"></div>
-                        <div className="post-options-comment"></div>
-                        <div className="post-options-share"></div>
+                        <button className="post-options-like" onClick={() => {return props.likesCount+1}}> </button>
+                        <div className="post-options-comment"> </div>
+                        <div className="post-options-share"> </div>
                     </div>
                     <div className="post-stat">
-                        <span>Likes: {props.likesCount}</span>
+                        <span >Likes: {props.likesCount}</span>
                         <span>Comments: {props.commentsCount}</span>
                     </div>
                 </div>

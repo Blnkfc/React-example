@@ -15,7 +15,7 @@ const App = (props) => {
                 <Switch>
                     <Route path="/profile" > <Profile profile={props.profile} /> </Route>
                     <Route path="/dialogs" > <Dialogs dialogs={props.dialogs}/> </Route>
-                    <Route path="/news" > <News dialogs={props.dialogs}/> </Route>
+                    <Route path="/news" > <News /> </Route>
                 </Switch>
             </div>
         </Router>

@@ -4,8 +4,13 @@ import Contacts from "./Contacts/Contacts";
 import Chat from "./Chat/Chat";
 
 const Dialogs = (props) => {
+    /* PROPS FOR DIALOGS */
     let DialogsElements = props.dialogs.contacts
-        .map(Dialog => <Contacts name={Dialog.name} message={Dialog.message}/> )
+        .map(Dialog => <Contacts name={Dialog.name} message={Dialog.message} id={Dialog.id}/> )
+
+    /* PROPS FOR CHAT */
+    /*let ChatElements = props.dialogs.chat
+        .map(C => <Chat name={C.name} message={C.message} id={C.id}/>)*/
 
     return (
         <div className="dialogs">
@@ -13,7 +18,8 @@ const Dialogs = (props) => {
                 {DialogsElements}
             </div>
             <div className="dialogs-chat">
-                <Chat name={props.dialogs.chat.name} message={props.dialogs.chat.message}  />
+                <Chat  chat={props.dialogs.chat} />
+                {/*{ChatElements}*/}
             </div>
         </div>
     )

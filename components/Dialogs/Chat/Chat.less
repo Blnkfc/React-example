@@ -3,8 +3,58 @@
 
 
 .chat{
+  display: flex;
+  flex-direction:column;
   background-color: @background_dark;
   height: 100%;
   width: 100%;
   padding: 2rem;
+  &-area{
+    flex-grow: 1;
+    border-bottom: @border_gray solid 1px;
+  }
+  &-message{
+    float: top;
+    z-index: -90;
+  }
+  &-functionBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    background-color: @background_light;
+    margin-top: 1rem;
+    textarea {
+      background-color: transparent;
+      color: @bright_text_color;
+      padding-left: 5px;
+      resize: none;
+      overflow: hidden;
+      border: 0;
+      border-radius: 15px;
+      line-height: 2rem;
+      width: 90%;
+      font-size: 0.9rem;
+      &:focus{
+        outline: none;
+      }
+    }
+
+    &-send {
+      background-color: transparent;
+      background-image: url("../../../img/send.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 5px;
+      height: 1.5rem;
+      width: 1.5rem;
+      border: none;
+      &:active{
+        border: transparent solid 1px;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
 }

@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
   align-items: end;
 }
 .message-img {
-  background-image: url("../../../../img/555_text.png");
+  background-image: url("../../../../img/image.png");
   background-size: cover;
   width: 2.5rem;
   height: 2.5rem;

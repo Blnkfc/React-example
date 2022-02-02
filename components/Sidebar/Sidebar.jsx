@@ -11,9 +11,9 @@ const Sidebar = () => {
             <div className="sidebar-link"><NavLink to="/dialogs" activeClassName={"sidebar-link-active"} >
                 Messages
             </NavLink></div>
-            <div className="sidebar-link"><a href="" >
+            <div className="sidebar-link"><NavLink to="/news" activeClassName={"sidebar-link-active"} >
                 News
-            </a></div>
+            </NavLink></div>
             <div className="sidebar-link"><a href="" >
                 Music
             </a></div>
