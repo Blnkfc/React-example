@@ -10,17 +10,25 @@
 
 .post{
   color: @text_color;
+  border: @border_gray solid 1px;
+  border-radius: 5px;
+  margin: 5px 5px 1.5rem 5px;
   &-user{
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-left: 0.5rem;
     height: 3.5rem;
     line-height: 3.5rem;
+    border: @border_gray solid 3px;
+    border-radius:5px 5px 0 0;
+    transform: translateY(-5%);
     &-img{
       display: inline-block;
       background-image: url("../../../../img/image.png");
       background-size: cover;
-      width: 3rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
       border: solid 3px @border_green;
       border-radius: 50%;
       text-align: center;
@@ -28,23 +36,25 @@
     }
     &-name{
       color: @bright_text_color;
-      position: absolute;
       display: inline-block;
       text-align: center;
       line-height: 3rem;
       padding-left: 0.5rem;
-      font-size: 20px;
+      font-size: 17px;
     }
   }
-  &-content{
-    &-text{
-      margin: 0 0 1rem 3rem;
-      font-size: 20px;
+  &-body{
+    display: flex;
+    flex-direction: column;
+    &-content{
+      &-text{
+        margin: 0 0 1rem 3rem;
+        font-size: 15px;
+      }
     }
-  }
-  &-options{
-    display: inline-block;
-    padding: 0 0.5rem 0 0.5rem;
+    &-options{
+      display: inline-block;
+      padding: 0 0.5rem 0 0.5rem;
       &-like {
         .options_adjust();
         background-image: url("../../../../img/like.png");
@@ -54,17 +64,18 @@
           background-color: red;
         }
       }
-    &-comment {
-      .options_adjust();
-      background-image: url("../../../../img/comment.png");
+      &-comment {
+        .options_adjust();
+        background-image: url("../../../../img/comment.png");
+      }
+      &-share {
+        .options_adjust();
+        background-image: url("../../../../img/share.png");
+      }
     }
-    &-share {
-      .options_adjust();
-      background-image: url("../../../../img/share.png");
+    &-stat span{
+      color: @text_color;
+      margin: 0 0 0 3rem;
     }
-  }
-  &-stat span{
-    color: @text_color;
-    margin: 0 0 0 3rem;
   }
 }

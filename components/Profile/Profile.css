@@ -33,6 +33,8 @@ body::-webkit-scrollbar-thumb {
 .content {
   grid-area: c;
   background-color: #242424;
+  /* PROFILE SECTION */
+  /* POST SECTION */
 }
 .content-cap {
   width: 100%;
@@ -80,6 +82,8 @@ body::-webkit-scrollbar-thumb {
   text-decoration: underline;
 }
 .content-posts {
+  display: flex;
+  flex-direction: column;
   color: #999999;
   padding: 0.5rem;
 }

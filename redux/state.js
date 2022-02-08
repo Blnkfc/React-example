@@ -1,12 +1,15 @@
+import {rerenderEntireTree} from "../render.js"
+
+
 let state = {
-    profile: {
-        posts: [
-            {name: `Alexandr`, text: `It's my first massage!`, likesCount: 215, commentsCount: `45`},
-            {name: `Megan`, text: `It's my first massage`, likesCount: 525, commentsCount: `67`},
-            {name: `Ashley`, text: `It's my first massage`, likesCount: 20, commentsCount: `2`},
+    profileData: {
+        postsArray: [
+            {id: 0, name: `Alexandr`, text: `It's my first massage!`, likesCount: 215, commentsCount: 45},
+            {id: 1, name: `Megan`, text: `Random stuff to take some space and see the look of the post when it wraps on the next line and understand what to do with that, this should be enough to take the whole space on the first line, i could just increase font size but this solution is for the weak people`, likesCount: 525, commentsCount: 67},
+            {id: 2, name: `Ashley`, text: `It's my first massage`, likesCount: 20, commentsCount: 2},
         ],
         profileInfo: {
-            name: "Pasha",
+            firstName: "Pasha",
             secondName: "Zabuha",
             dayOfBirth: `12`,
             monthOfBirth: "September",
@@ -36,5 +39,17 @@ let state = {
             {name: `Andrew`, message: `Bye`, id: `7`}
         ]
     }
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 3,
+        name: "Somebody",
+        text: postMessage,
+        likesCount: 0,
+        commentsCount: 0
+    }
+    state.profileData.postsArray.push(newPost);
+    rerenderEntireTree(state);
 }
 export default state;
