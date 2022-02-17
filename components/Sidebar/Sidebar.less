@@ -5,7 +5,9 @@
 .sidebar{
   display: flex;
   flex-direction: column;
+  align-content: center;
   flex-basis: 80%;
+  font-family: @Ubuntu;
   grid-area: s;
   background-color: @background_dark;
   padding:1rem 0 0 1rem;
@@ -23,7 +25,7 @@
       color: white;
       padding-left: 1rem;
       text-decoration: none;
-
+      line-height: 2rem;
     }
     &:hover{
       background-color: lighten(@background_dark, 2%);

@@ -1,4 +1,3 @@
-import {rerenderEntireTree} from "../render.js"
 
 
 let state = {
@@ -15,8 +14,11 @@ let state = {
             monthOfBirth: "September",
             city: "Kyiv",
             education: "NAU",
-            webSite: "https://www.instagram.com/pavuchara.jpg/"}
-    },
+            webSite: "https://www.instagram.com/pavuchara.jpg/"},
+        editPostText: {
+            text: "what"},
+        },
+
     dialogs: {
         contacts: [
             {id: `0`, name: `Sasha`, message: `I'm losing my mind!!!`},
@@ -41,15 +43,31 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id: 3,
         name: "Somebody",
-        text: postMessage,
+        text: state.profileData.editPostText,
         likesCount: 0,
         commentsCount: 0
     }
+    state.profileData.editPostText = '';
     state.profileData.postsArray.push(newPost);
     rerenderEntireTree(state);
 }
+
+export let updatePostText = (text) => {
+    state.profileData.editPostText = text;
+    rerenderEntireTree(state);
+}
+
+let rerenderEntireTree = () => {
+}
+
+export let subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
+
+
+
 export default state;

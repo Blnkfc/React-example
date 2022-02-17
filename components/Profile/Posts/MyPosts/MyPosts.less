@@ -10,9 +10,10 @@
 
 .post{
   color: @text_color;
-  border: @border_gray solid 1px;
+/*  border: @border_gray solid 1px;*/
   border-radius: 5px;
   margin: 5px 5px 1.5rem 5px;
+  .Ubuntu();
   &-user{
     display: flex;
     flex-direction: row;
@@ -20,8 +21,8 @@
     padding-left: 0.5rem;
     height: 3.5rem;
     line-height: 3.5rem;
-    border: @border_gray solid 3px;
-    border-radius:5px 5px 0 0;
+    border-top: @border_gray solid 1px ;
+    /*border-radius:5px 5px 0 0;*/
     transform: translateY(-5%);
     &-img{
       display: inline-block;
@@ -61,7 +62,8 @@
         background-color: @background_dark;
         border: none;
         &:active{
-          background-color: red;
+          width: 1.4rem;
+          height: 1.4rem;
         }
       }
       &-comment {

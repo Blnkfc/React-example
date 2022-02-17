@@ -2,9 +2,22 @@
 * {
   box-sizing: border-box;
 }
-.body {
+/*@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Medium.eot');
+  src: url('../fonts/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+  url('../fonts/Ubuntu-Medium.woff') format('woff'),
+  url('../fonts/Ubuntu-Medium.ttf') format('truetype'),
+  url('../fonts/Ubuntu-Medium.svg#Ubuntu-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}*/
+html {
   width: 100%;
   background-color: #2b2b2b;
+  background-size: cover;
 }
 .wrapper {
   display: grid;
@@ -32,9 +45,10 @@ body::-webkit-scrollbar-thumb {
 }
 .post {
   color: #999999;
-  border: #5c5c5c solid 1px;
+  /*  border: @border_gray solid 1px;*/
   border-radius: 5px;
   margin: 5px 5px 1.5rem 5px;
+  font-family: "Ubuntu", sans-serif;
 }
 .post-user {
   display: flex;
@@ -43,8 +57,8 @@ body::-webkit-scrollbar-thumb {
   padding-left: 0.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
-  border: #5c5c5c solid 3px;
-  border-radius: 5px 5px 0 0;
+  border-top: #5c5c5c solid 1px;
+  /*border-radius:5px 5px 0 0;*/
   transform: translateY(-5%);
 }
 .post-user-img {
@@ -89,7 +103,8 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 .post-body-options-like:active {
-  background-color: red;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 .post-body-options-comment {
   margin: 0 0.5rem 0 3rem;
