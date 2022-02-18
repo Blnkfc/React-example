@@ -16,7 +16,7 @@ const Posts = (props) => {
 
     let editPost = () =>{
         let text = newPost.current.value;
-        props.editPost(text);
+        props.updatePostText(text);
     }
 
 

@@ -103,6 +103,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 .post-body-options-like:active {
+  background-image: url("../../../../img/likeActive.png");
   width: 1.4rem;
   height: 1.4rem;
 }
