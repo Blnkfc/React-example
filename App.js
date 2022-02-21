@@ -14,7 +14,7 @@ const App = (props) => {
                     <Header/>
                     <Sidebar/>
                     <Switch>
-                        <Route path="/profile" > <Profile profile={props.state.profileData } createPost={props.createPost} updatePostText={props.updatePostText}/> </Route>
+                        <Route path="/profile" > <Profile profile={props.state.profileData } dispatch={props.dispatch}/> </Route>
                         <Route path="/dialogs" > <Dialogs dialogs={props.state.dialogs}/> </Route>
                         <Route path="/news" > <News /> </Route>
                     </Switch>

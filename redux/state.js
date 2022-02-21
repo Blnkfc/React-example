@@ -47,31 +47,33 @@ export let store = {
       return this._state;
     },
 
-    /* POST ADDER */
-    addPost() {
-        let newPost = {
-            id: 3,
-            name: "Somebody",
-            text: this._state.profileData.editPostText,
-            likesCount: 0,
-            commentsCount: 0
-        }
-        this._state.profileData.editPostText = '';
-        this._state.profileData.postsArray.push(newPost);
-        this._callSubscriber(this._state);
-    },
-
-    /* EVERY-CHARACTER FLUX CYCLER */
-    updatePostText(text) {
-        this._state.profileData.editPostText = text;
-        this._callSubscriber(this._state);
-    },
-
     /* SUBSCRIBER */
     subscribe(observer) {
         this._callSubscriber = observer;
     },
     _callSubscriber() {
         alert('Oops, an error broke everything');
+    },
+
+    dispatch(action){
+        /* POST ADDER */
+         if (action.type === 'ADD-POST'){
+             let newPost = {
+                 id: 3,
+                 name: "Somebody",
+                 text: this._state.profileData.editPostText,
+                 likesCount: 0,
+                 commentsCount: 0
+             }
+             this._state.profileData.editPostText = '';
+             this._state.profileData.postsArray.push(newPost);
+             this._callSubscriber(this._state);
+         }
+        /* EVERY-CHARACTER FLUX CYCLER */
+         else if (action.type === 'UPDATE-POST-TEXT'){
+             this._state.profileData.editPostText = action.text;
+             this._callSubscriber(this._state);
+         }
+         else alert('error')
     }
 }
