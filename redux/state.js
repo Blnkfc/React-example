@@ -1,3 +1,5 @@
+const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+const ADD_POST = 'ADD-POST';
 
 export let store = {
     _state: {
@@ -57,7 +59,7 @@ export let store = {
 
     dispatch(action){
         /* POST ADDER */
-         if (action.type === 'ADD-POST'){
+         if (action.type === ADD_POST){
              let newPost = {
                  id: 3,
                  name: "Somebody",
@@ -70,10 +72,20 @@ export let store = {
              this._callSubscriber(this._state);
          }
         /* EVERY-CHARACTER FLUX CYCLER */
-         else if (action.type === 'UPDATE-POST-TEXT'){
+         else if (action.type === UPDATE_POST_TEXT){
              this._state.profileData.editPostText = action.text;
              this._callSubscriber(this._state);
          }
          else alert('error')
-    }
+    },
+
 }
+
+    /* ACTION CREATORS */
+    export const editPostActionCreator = (text) => {
+        return {type: UPDATE_POST_TEXT, text: text}
+    }
+    export const createPostActionCreator = () => {
+
+        return {type: ADD_POST}
+    }
