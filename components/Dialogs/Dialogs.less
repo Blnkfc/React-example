@@ -16,6 +16,12 @@
     &:focus{
       background-color: lighten(@background_lighter, 10%);
     }
+    a{
+      text-decoration: none;
+      &:active{
+        background-color: lighten(@background_lighter, 10%);
+      }
+    }
   }
   &-chat{
     flex-grow: 3;

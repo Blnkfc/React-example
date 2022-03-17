@@ -18,7 +18,6 @@
     cursor: pointer;
   }
   &-active{
-    .contact();
     background-color: lighten(@background_lighter, 10%);
   }
   &-image {
@@ -34,13 +33,16 @@
   &-info {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem ;
+    margin-left: 1rem;
+    text-decoration: none;
     &-name {
+      text-decoration: inherit;
       display: inline-block;
       color: @bright_text_color;
       font-weight: 600;
     }
     &-message {
+      text-decoration: none;
       display: inline-block;
       color: @text_color;
     }
@@ -48,6 +50,8 @@
   a{
     display: flex;
     width: 100%;
-    text-decoration: none;
+    &:link{
+      text-decoration: none;
+    }
   }
 }

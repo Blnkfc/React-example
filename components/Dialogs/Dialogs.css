@@ -59,6 +59,12 @@ body::-webkit-scrollbar-thumb {
 .dialogs-contacts:focus {
   background-color: #4a4a4a;
 }
+.dialogs-contacts a {
+  text-decoration: none;
+}
+.dialogs-contacts a:active {
+  background-color: #4a4a4a;
+}
 .dialogs-chat {
   flex-grow: 3;
 }

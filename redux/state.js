@@ -1,5 +1,7 @@
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 const ADD_POST = 'ADD-POST';
+const UPDATE_MESSAGE_TEXT = `UPDATE_MESSAGE_TEXT`
+const ADD_MESSAGE = `ADD_MESSAGE`
 
 export let store = {
     _state: {
@@ -33,18 +35,31 @@ export let store = {
                 {id: `6`, name: `Lily`, message: `As good as always`},
                 {id: `7`, name: `Andrew`, message: `Bye`}
             ],
-            chat: [
-                {name: `Sasha`, message: `I'm losing my mind!!!`, id: `0`},
-                {name: `Bread`, message: `Is that possible for you?`, id: `1`},
-                {name: `King`, message: `Entertaining`, id: `2`},
-                {name: `Clown`, message: `Are u free for now?`, id: `3`},
-                {name: `Outer world`, message: `I can't stop laughing`, id: `4`},
-                {name: `Lesly`, message: `I literally want to die`, id: `5`},
-                {name: `Lily`, message: `As good as always`, id: `6`},
-                {name: `Andrew`, message: `Bye`, id: `7`}
-            ]
+            chatWindow: {
+                users: [
+                    {user: `Sasha`,
+                    id: 1,
+                    message: [
+                        {text: `I'm losing my mind!!!`},
+                        {text: `I'm losing my mind!!!`},
+                        {text: `I'm losing my mind!!!`},
+                    ]}
+                ],
+                editMessageText: ``
+            }
+
         }
     },
+
+/*{name: `Sasha`, message: `I'm losing my mind!!!`, id: `0`},
+{name: `Bread`, message: `Is that possible for you?`, id: `1`},
+{name: `King`, message: `Entertaining`, id: `2`},
+{name: `Clown`, message: `Are u free for now?`, id: `3`},
+{name: `Outer world`, message: `I can't stop laughing`, id: `4`},
+{name: `Lesly`, message: `I literally want to die`, id: `5`},
+{name: `Lily`, message: `As good as always`, id: `6`},
+{name: `Andrew`, message: `Bye`, id: `7`}*/
+
     GetState() {
       return this._state;
     },
@@ -71,10 +86,24 @@ export let store = {
              this._state.profileData.postsArray.push(newPost);
              this._callSubscriber(this._state);
          }
-        /* EVERY-CHARACTER FLUX CYCLER */
+        /* POSTS FLUX CYCLER */
          else if (action.type === UPDATE_POST_TEXT){
              this._state.profileData.editPostText = action.text;
              this._callSubscriber(this._state);
+         }
+         /* MESSAGE ADDER */
+         else if(action.type === ADD_MESSAGE){
+            let newMessage ={
+                text: this._state.dialogs.chatWindow.editMessageText
+            }
+            this._state.dialogs.chatWindow.editMessageText = ``;
+            this._state.dialogs.chatWindow.users[0].message.push(newMessage);
+            this._callSubscriber(this._state)
+         }
+         /* MESSAGE FLUX CYCLER */
+         else if (action.type === UPDATE_MESSAGE_TEXT){
+            this._state.dialogs.chatWindow.editMessageText = action.text;
+            this._callSubscriber(this._state)
          }
          else alert('error')
     },
@@ -85,7 +114,15 @@ export let store = {
     export const editPostActionCreator = (text) => {
         return {type: UPDATE_POST_TEXT, text: text}
     }
-    export const createPostActionCreator = () => {
 
+    export const createPostActionCreator = () => {
         return {type: ADD_POST}
+    }
+
+    export const editMessageActionCreator = (text) => {
+        return {type: UPDATE_MESSAGE_TEXT, text: text}
+    }
+
+    export const createMessageActionCreator = () => {
+        return {type: ADD_MESSAGE}
     }

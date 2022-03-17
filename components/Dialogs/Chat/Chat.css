@@ -46,18 +46,11 @@ body::-webkit-scrollbar-thumb {
 .chat {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #242424;
   height: 100%;
   width: 100%;
   padding: 2rem;
-}
-.chat-area {
-  flex-grow: 1;
-  border-bottom: #5c5c5c solid 1px;
-}
-.chat-message {
-  float: top;
-  z-index: -90;
 }
 .chat-functionBar {
   display: flex;

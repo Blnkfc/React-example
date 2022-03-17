@@ -5,17 +5,14 @@
 .chat{
   display: flex;
   flex-direction:column;
+  justify-content: space-between;
   background-color: @background_dark;
   height: 100%;
   width: 100%;
   padding: 2rem;
-  &-area{
-    flex-grow: 1;
-    border-bottom: @border_gray solid 1px;
-  }
+
   &-message{
-    float: top;
-    z-index: -90;
+
   }
   &-functionBar {
     display: flex;
