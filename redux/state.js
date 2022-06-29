@@ -1,3 +1,6 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 const ADD_POST = 'ADD-POST';
 const UPDATE_MESSAGE_TEXT = `UPDATE_MESSAGE_TEXT`
@@ -73,39 +76,9 @@ export let store = {
     },
 
     dispatch(action){
-        /* POST ADDER */
-         if (action.type === ADD_POST){
-             let newPost = {
-                 id: 3,
-                 name: "Somebody",
-                 text: this._state.profileData.editPostText,
-                 likesCount: 0,
-                 commentsCount: 0
-             }
-             this._state.profileData.editPostText = '';
-             this._state.profileData.postsArray.push(newPost);
-             this._callSubscriber(this._state);
-         }
-        /* POSTS FLUX CYCLER */
-         else if (action.type === UPDATE_POST_TEXT){
-             this._state.profileData.editPostText = action.text;
-             this._callSubscriber(this._state);
-         }
-         /* MESSAGE ADDER */
-         else if(action.type === ADD_MESSAGE){
-            let newMessage ={
-                text: this._state.dialogs.chatWindow.editMessageText
-            }
-            this._state.dialogs.chatWindow.editMessageText = ``;
-            this._state.dialogs.chatWindow.users[0].message.push(newMessage);
-            this._callSubscriber(this._state)
-         }
-         /* MESSAGE FLUX CYCLER */
-         else if (action.type === UPDATE_MESSAGE_TEXT){
-            this._state.dialogs.chatWindow.editMessageText = action.text;
-            this._callSubscriber(this._state)
-         }
-         else alert('error')
+        this._state.profileData = profileReducer(this._state.profileData, action);
+        this._state.dialogs = dialogsReducer(this._state.dialogs, action);
+        this._callSubscriber(this._state);
     },
 
 }

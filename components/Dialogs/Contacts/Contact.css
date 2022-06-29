@@ -56,8 +56,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #4a4a4a;
   cursor: pointer;
 }
-.contact-active {
-  background-color: #4a4a4a;
+.contact:active {
+  background-color: #525252;
 }
 .contact-image {
   display: inline-block;

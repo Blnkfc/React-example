@@ -13,45 +13,48 @@
 
 .contact {
   .contact();
+
   &:hover{
     background-color: lighten(@background_lighter, 10%);
-    cursor: pointer;
+      cursor: pointer;
+}
+  &:active{
+    background-color: lighten(@background_lighter, 13%);
   }
-  &-active{
-    background-color: lighten(@background_lighter, 10%);
-  }
-  &-image {
-    display: inline-block;
-    background-image: url("../../../img/image.png");
-    background-size: cover;
-    border: 2px solid @border_blue;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-  }
+&-image {
+  display: inline-block;
+  background-image: url("../../../img/image.png");
+  background-size: cover;
+  border: 2px solid @border_blue;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
 
-  &-info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
+&-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  text-decoration: none;
+  &-name {
+    text-decoration: inherit;
+    display: inline-block;
+    color: @bright_text_color;
+    font-weight: 600;
+  }
+  &-message {
     text-decoration: none;
-    &-name {
-      text-decoration: inherit;
-      display: inline-block;
-      color: @bright_text_color;
-      font-weight: 600;
-    }
-    &-message {
-      text-decoration: none;
-      display: inline-block;
-      color: @text_color;
-    }
+    display: inline-block;
+    color: @text_color;
   }
-  a{
-    display: flex;
-    width: 100%;
-    &:link{
-      text-decoration: none;
-    }
+}
+a{
+  display: flex;
+  width: 100%;
+
+  &:link{
+    text-decoration: none;
   }
+}
+
 }

@@ -3,7 +3,7 @@ import './Chat.css'
 import Message from "./Message/Message";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavLink from "react-router-dom/es/NavLink";
-import {createPostActionCreator, editMessageActionCreator} from "../../../redux/state";
+import {createMessageActionCreator, editMessageActionCreator} from "../../../redux/state";
 
 
 const Chat = (props) => {
@@ -14,7 +14,7 @@ const Chat = (props) => {
 
     let createMessage = () =>{
         let text = newMessage.current.value;
-        props.dispatch(createPostActionCreator())
+        props.dispatch(createMessageActionCreator())
     }
     let editMessage = () =>{
         let text = newMessage.current.value;
