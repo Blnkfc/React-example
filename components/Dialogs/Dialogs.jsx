@@ -1,11 +1,9 @@
 import React from "react";
 import './Dialogs.css'
 import Contacts from "./Contacts/Contacts";
-import Chat from "./Chat/Chat";
 import NavLink from "react-router-dom/es/NavLink";
 import BrowserRouter from "react-router-dom/es/BrowserRouter";
-import Switch from "react-router-dom/es/Switch";
-import Route from "react-router-dom/es/Route";
+import ChatContainer from "./Chat/ChatContainer";
 
 const Dialogs = (props) => {
     /* PROPS FOR DIALOGS */
@@ -26,7 +24,7 @@ const Dialogs = (props) => {
                 {/*<Switch>
                     <Route path={"/dialogs/"+props.dialogs.chatWindow.users.name}><Chat dispatch={props.dispatch} chat={props.dialogs.chatWindow}  /></Route>
                 </Switch>*/}
-                <Chat dispatch={props.dispatch} chat={props.dialogs.chatWindow}  />
+                <ChatContainer dispatch={props.dispatch} chat={props.dialogs.chatWindow}  />
                 {/*{ChatElements}*/}
             </div>
         </div>

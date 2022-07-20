@@ -1,7 +1,7 @@
 import React from "react";
 import './Posts.css'
 import MyPosts from "./MyPosts/MyPosts";
-import {createPostActionCreator, editPostActionCreator} from "../../../redux/state";
+
 
 
 
@@ -12,20 +12,22 @@ const Posts = (props) => {
     let newPost = React.createRef();
 
     let createPost = () => {
-        let text = newPost.current.value;
-        props.dispatch(createPostActionCreator());
+        /*let text = newPost.current.value;*/
+        /*props.dispatch(createPostActionCreator());*/
+        props.createPost();
     }
 
     let editPost = () =>{
         let text = newPost.current.value;
-        props.dispatch(editPostActionCreator(text));
+        /*props.dispatch(editPostActionCreator(text));*/
+        props.editPost(text);
     }
 
 
     return(
         <div className={`posts`}>
             <div className="content-posts">
-                <textarea name="" id="Post" cols="140" rows="7" onChange={editPost} value={props.editPostText} ref={newPost}  />
+                <textarea title="Space for post text" name="" id="Post" cols="140" rows="7" onChange={editPost} value={props.editPostText} ref={newPost}  />
                 <button className={'content-posts-btn'} onClick={createPost}>Send</button>
             </div>
             {PostElements}
