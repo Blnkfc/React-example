@@ -1,4 +1,3 @@
-/* GENERAL TAGS  */
 * {
   box-sizing: border-box;
 }
@@ -46,28 +45,14 @@ body::-webkit-scrollbar-thumb {
   background-color: #5e5e5e;
   border-radius: 10px;
 }
-.dialogs {
+.users {
   display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  width: 100%;
+  color: #e6e6e6;
   font-family: "Ubuntu", sans-serif;
 }
-.dialogs-contacts {
-  flex-grow: 1;
-  max-width: 20rem;
-  background-color: #313131;
-}
-.dialogs-contacts:hover {
-  background-color: #4a4a4a;
-  cursor: pointer;
-}
-.dialogs-contacts:focus {
-  background-color: #4a4a4a;
-}
-.dialogs-contacts a {
-  text-decoration: none;
-}
-.dialogs-contacts a:active {
-  background-color: #4a4a4a;
-}
-.dialogs-chat {
-  flex-grow: 3;
+.users-title {
+  padding-left: 1rem ;
 }

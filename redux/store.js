@@ -1,10 +1,13 @@
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
+import usersReducer from "./usersReducer";
 
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 const ADD_POST = 'ADD-POST';
 const UPDATE_MESSAGE_TEXT = `UPDATE_MESSAGE_TEXT`
 const ADD_MESSAGE = `ADD_MESSAGE`
+const FOLLOW = 'FOLLOW'
+const UNFOLLOW = 'UNFOLLOW'
 
 export let store = {
     _state: {
@@ -51,7 +54,12 @@ export let store = {
                 editMessageText: ``
             }
 
-        }
+        },
+        usersArray:[
+            {id: 0, firstName: 'Sandra', secondName: 'Lexis', age: 21, city: 'Madrid', gender: 'Female', followed: false},
+            {id: 1, firstName: 'Andrew', secondName: 'France', age: 21, city: 'Kyiv', gender: 'Male', followed: false},
+            {id: 2, firstName: 'Kevin', secondName: 'Hart', age: 21, city: 'New York',gender: 'Male', followed: true}
+        ]
     },
 
 /*{name: `Sasha`, message: `I'm losing my mind!!!`, id: `0`},
@@ -72,18 +80,22 @@ export let store = {
         this._callSubscriber = observer;
     },
     _callSubscriber() {
-        alert('Oops, an error broke everything');
+        /*alert('Oops, an error broke everything')*/
     },
 
     dispatch(action){
         this._state.profileData = profileReducer(this._state.profileData, action);
         this._state.dialogs = dialogsReducer(this._state.dialogs, action);
+        this._state.usersArray = usersReducer(this._state.usersArray, action);
         this._callSubscriber(this._state);
     },
 
 }
 
     /* ACTION CREATORS */
+
+    /* PROFILE */
+
     export const editPostActionCreator = (text) => {
         return {type: UPDATE_POST_TEXT, text: text}
     }
@@ -92,10 +104,22 @@ export let store = {
         return {type: ADD_POST}
     }
 
+    /* DIALOGS */
+
     export const editMessageActionCreator = (text) => {
         return {type: UPDATE_MESSAGE_TEXT, text: text}
     }
 
     export const createMessageActionCreator = () => {
         return {type: ADD_MESSAGE}
+    }
+
+    /* USERS */
+
+    export const createFollowActionCreator = () => {
+        return {type: FOLLOW}
+    }
+
+    export const createUnfollowActionCreator = () => {
+        return {type: UNFOLLOW}
     }

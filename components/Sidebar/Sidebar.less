@@ -7,7 +7,7 @@
   flex-direction: column;
   align-content: center;
   flex-basis: 80%;
-  font-family: @Ubuntu;
+  .Ubuntu();
   grid-area: s;
   background-color: @background_dark;
   padding:1rem 0 0 1rem;
@@ -35,6 +35,9 @@
       background-color: lighten(@background_dark, 2%);
       border: solid 1px lighten(@border_gray, 30%);
       border-radius: 5px;
+    }
+    & #settings{
+
     }
   }
 }

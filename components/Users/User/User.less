@@ -1,0 +1,81 @@
+@import "../../../less/App.less";
+
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: self-end;
+  color: @bright_text_color;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-bottom: 1px solid @border_gray;
+&-image{
+  background-image: url("../../../img/image.png");
+  background-size: cover;
+  width: 7rem;
+  height: 7rem;
+  border: @border_blue 3px solid;
+  border-radius: 50%;
+}
+  &-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 1rem;
+    &-name {
+      font-size: 2rem;
+      &-firstName{
+        display: inline-block;
+      }
+      &-secondName{
+        display: inline-block;
+        margin-left: 1rem  ;
+      }
+      &:hover{
+        cursor: pointer;
+        color: lighten(@bright_text_color,10%);
+      }
+    }
+    &-bottomline{
+      &-gender{
+        display: inline-block;
+        line-height: 3rem;
+      }
+      &-age{
+        display: inline-block;
+        padding-left: 0.5rem;
+      }
+      &-city{
+        display: inline-block;
+        padding-left: 0.5rem;
+      }
+    }
+    &-follow{
+      align-self: flex-end;
+      width: 10rem;
+      height: 2rem;
+      margin-right: 1rem;
+      color: @text_color;
+      background-color: @background_lighter;
+      border: 1px solid @border_gray;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      &:hover{
+        cursor: pointer;
+        border: 2px solid lighten(@border_gray, 15%);
+        color: lighten(@text_color, 15%);
+      }
+      &:active{
+        background-color: lighten(@background_light, 20%);
+        color: darken(@text_color, 40%);
+      }
+      &:focus{
+        background-color: lighten(@background_light, 20%);
+        color: darken(@text_color, 40%);
+      }
+    }
+  }
+
+}

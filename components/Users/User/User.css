@@ -1,4 +1,3 @@
-/* GENERAL TAGS  */
 * {
   box-sizing: border-box;
 }
@@ -46,52 +45,78 @@ body::-webkit-scrollbar-thumb {
   background-color: #5e5e5e;
   border-radius: 10px;
 }
-.contact {
+.user {
   display: flex;
-  padding: 0.8rem;
-  border: none;
-  border-bottom: solid 1px #3e3e3e;
-  background-color: #313131;
-  width: 100%;
-  text-decoration: none;
+  flex-direction: row;
+  align-items: self-end;
+  color: #e6e6e6;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-bottom: 1px solid #5c5c5c;
 }
-.contact:hover {
-  background-color: #4a4a4a;
-  cursor: pointer;
-}
-.contact:active {
-  background-color: #525252;
-}
-.contact-image {
-  display: inline-block;
+.user-image {
   background-image: url("../../../img/image.png");
   background-size: cover;
-  border: 2px solid #0a2682;
+  width: 7rem;
+  height: 7rem;
+  border: #0a2682 3px solid;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
 }
-.contact-info {
+.user-info {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
-  text-decoration: none;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 1rem;
 }
-.contact-info-name {
-  text-decoration: inherit;
+.user-info-name {
+  font-size: 2rem;
+}
+.user-info-name-firstName {
   display: inline-block;
-  color: #e6e6e6;
+}
+.user-info-name-secondName {
+  display: inline-block;
+  margin-left: 1rem  ;
+}
+.user-info-name:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+.user-info-bottomline-gender {
+  display: inline-block;
+  line-height: 3rem;
+}
+.user-info-bottomline-age {
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+.user-info-bottomline-city {
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+.user-info-follow {
+  align-self: flex-end;
+  width: 10rem;
+  height: 2rem;
+  margin-right: 1rem;
+  color: #999999;
+  background-color: #313131;
+  border: 1px solid #5c5c5c;
+  border-radius: 0.3rem;
   font-weight: 600;
 }
-.contact-info-message {
-  text-decoration: none;
-  display: inline-block;
-  color: #999999;
+.user-info-follow:hover {
+  cursor: pointer;
+  border: 2px solid #828282;
+  color: #bfbfbf;
 }
-.contact a {
-  display: flex;
-  width: 100%;
+.user-info-follow:active {
+  background-color: #878787;
+  color: #333333;
 }
-.contact a:link {
-  text-decoration: none;
+.user-info-follow:focus {
+  background-color: #878787;
+  color: #333333;
 }

@@ -2,6 +2,9 @@
 * {
   box-sizing: border-box;
 }
+.Ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
 /*@font-face {
   font-family: 'Ubuntu';
   src: url('../fonts/Ubuntu-Medium.eot');

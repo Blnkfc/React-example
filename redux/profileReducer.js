@@ -1,5 +1,3 @@
-
-
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 const ADD_POST = 'ADD-POST';
 
@@ -23,7 +21,8 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         /* POST ADDER */
-        case ADD_POST:
+        case ADD_POST :
+        {
             let newPost = {
                 id: 3,
                 name: "Somebody",
@@ -31,15 +30,22 @@ const profileReducer = (state = initialState, action) => {
                 likesCount: 0,
                 commentsCount: 0
             }
-            state.editPostText = '';
-            state.postsArray.push(newPost);
-            return state;
+            let stateCopy = {...state};
+            stateCopy.postsArray = [...state.postsArray];
+            stateCopy.postsArray.push(newPost);
+            stateCopy.editPostText = '';
+            debugger;
+            return stateCopy;
+        }
         /* POSTS FLUX CYCLER */
         case UPDATE_POST_TEXT:
-            return {...state, editPostText: action.text}
+        {
+            let stateCopy = {...state}
+            /*return {...state, editPostText: action.text}*/
 
-            /*state.editPostText = action.text;
-            return state;*/
+            stateCopy.editPostText = action.text;
+            return stateCopy;
+        }
         default:
             return state;
     }

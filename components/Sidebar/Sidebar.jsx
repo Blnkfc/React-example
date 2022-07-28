@@ -14,10 +14,13 @@ const Sidebar = () => {
             <div className="sidebar-link"><NavLink to="/news" activeClassName={"sidebar-link-active"} >
                 News
             </NavLink></div>
+            <div className="sidebar-link"><NavLink to="/users" activeClassName={"sidebar-link-active"} >
+                Users
+            </NavLink></div>
             <div className="sidebar-link"><a href="" >
                 Music
             </a></div>
-            <div className="sidebar-link"><a href=""  id={'settings'}>
+            <div className="sidebar-link" id={'settings'}><a href=""  >
                 Settings
             </a></div>
         </nav>
